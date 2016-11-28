@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Network Security Slide</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,12 +20,73 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+			.company {
+				margin-bottom: 30px !important;
+				/* width: 350px; */
+				border-radius: 8px;
+				-webkit-border-radius: 8px;
+				border: solid 1px #555 !important;
+			}
+
+			.company .amazan {
+				background: #555;
+			}
+
+			.company .rakutan {
+				background: #555;
+			}
+
+			.company h4 {
+				padding: 10px;
+				color: #fff;
+				-webkit-border-top-right-radius: 6px;
+				-webkit-border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+				border-top-left-radius: 6px;
+			}
+
+			.company p {
+				margin: 0;
+				padding: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown data-separator="^\n---$" data-separator-vertical="^\n>>>$">
+					<script type="text/template">
+						<!--.slide: data-transition="zoom" -->
+						# Network Security
+
+						---
+						## Introduction
+
+						>>>
+						<!-- .slide: style="text-align: left;" -->
+						### Character
+						- - -
+
+						<div class="company">
+							<h4 class="amazan">Amazan Company</h4>
+							<p>Alice: an employee</p>
+							<p>Bob: an administrator</p>
+						</div>
+
+						<div class="company">
+							<h4 class="rakutan">Rakutan Company</h4>
+							<p><span class="">Attacker:</span> an employee</p>
+						</div>
+
+						---
+						## The END
+
+						### Thank you for listening.
+
+					</script>
+				</section>
 			</div>
 		</div>
 
