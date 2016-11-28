@@ -52,6 +52,12 @@
 				margin: 0;
 				padding: 10px;
 			}
+
+			img {
+				border: 0 !important;
+				box-shadow: none !important;
+				background: none !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -72,13 +78,13 @@
 
 						<div class="company">
 							<h4 class="amazan">Amazan Company</h4>
-							<p>Alice: an employee</p>
+							<p>Alice: works in technology department</p>
 							<p>Bob: an administrator of web server</p>
 						</div>
 
 						<div class="company">
 							<h4 class="rakutan">Rakutan Company</h4>
-							<p><span class="">Richard:</span> Alice's friend (attacker)</p>
+							<p><span class="">Richard:</span> Alice's friend</p>
 							<p><span class="">Sherry:</span> an executive</p>
 						</div>
 
@@ -102,7 +108,7 @@
 
 						>>>
 						<img src="./img/person.png"></img>
-						<img src="./img/arrow-fat.png"></img>
+						<img src="./img/right-arrow-fat.png"></img>
 						<img src="./img/person.png"></img>
 
 						The boss Sherry asked employee Richard to do it.
@@ -116,7 +122,7 @@
 
 						>>>
 						<img src="./img/person.png"></img>
-						<img src="./img/arrow-fat.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
+						<img src="./img/right-arrow-fat.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 						<img src="./img/firewall.png"></img> <!-- .element: class="fragment" data-fragment-index="1" -->
 						<img src="./img/server.png"></img>
 
@@ -141,11 +147,51 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 
 						---
 						## Chapter 2.
-						### 
+						### Richard uses his friend Alice
+
+						>>>
+						### At Alice's house
+						- - -
+						<img src="./img/person.png"></img>
+						<img src="./img/document.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
+						<img src="./img/person.png"></img>
+						<img src="./img/right-arrow-fat.png"></img>
+						<img src="./img/tds.png"></img>
+
+						Richard gets ID and password of Amazan company's server. <!-- .element: class="fragment" data-fragment-index="0" -->  
+
+						Richard knows how to connect the server. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						>>>
+						### At Richard's house
+						- - -
+						## LOGIN SUCCESS <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						<img src="./img/person.png"></img>
+						<img src="./img/right-arrow-fat.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
+						<img src="./img/tds.png"></img>
+						<img src="./img/document.png"></img> <!-- .element: class="fragment" data-fragment-index="2" -->
+
+						- Network structure in Amazan company. <!-- .element: class="fragment" data-fragment-index="3" -->
+						- The same login ID is used in both technology department's server and web server, but password is different. <!-- .element: class="fragment" data-fragment-index="4" -->
+
+						>>>
+						### Network structure in Amazan
+						- - -
+						<img src="./img/ns.png" width=400></img>
+
 
 						---
 						## Chapter 3.
-						### 
+						### Second attack
+
+						>>>
+						### Dictionary attack
+						- - -
+						<img src="./img/ns-da.png" width=300></img>
+
+						### GET ID & PASSWORD <!-- .element: class="fragment" data-fragment-index="0" -->
+						### TO LOGIN WEB SERVER <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						---
 						## The END
