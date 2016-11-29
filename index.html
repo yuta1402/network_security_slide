@@ -147,7 +147,7 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 
 						---
 						## Chapter 2.
-						### Second attack
+						### Preparation for attack
 
 						>>>
 						### At Alice's house
@@ -184,10 +184,13 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 
 						<img src="./img/ns.png" width=300></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 
-
+						---
+						## Chapter 3.
+						### Attack on web server
 
 						>>>
-						### Dictionary attack
+						### Dictionary attack on the web server
+
 						- - -
 						<img src="./img/ns-da.png" width=300></img>
 
@@ -195,10 +198,12 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						### TO LOGIN WEB SERVER <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						>>>
-						<img src="./img/ns-login.png" width=400></img>
+						### Ptrace attack on the web server
+						- - -
+						<img src="./img/ns-login.png" width=300></img>
 
 						GET ROOT AUTHORIZATION  
-						OF WEB SERVER BY "PTRACE"
+						OF WEB SERVER BY "PTRACE" <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						>>>
 						## Ptrace log
@@ -223,19 +228,125 @@ root
 						```
 
 						>>>
+						### Install a backdoor in web server
+						- - -
 						<img src="./img/ns-bd.png" width=400></img>
 
-						INSTALL A BACK DOOR IN WEB SERVER
+						---
+						## Chapter 4.
+						### Pingflood attack
+
+						>>>
+						### Pingflood attack on web server
+						- - -
+						<img src="./img/ns-sa.png" width=400></img>
+
+						### SERVER DOWN <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						>>>
+						### Pingflood attack log
+						- - -
 
 						---
-						## Chapter 3.
+						## Chapter 5.
+
+						>>>
+						![user](./img/person.png)
+						![user](./img/person.png)
+						![user](./img/person.png)
+						![user](./img/person.png)
+						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+						![user](./img/buildings.png)
+						![user](./img/operator.png)
+
+						Users call the Amazan because of the web server down. <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						>>>
+						![user](./img/person.png)
+						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+						![user](./img/server-trouble.png)
+
+						Bob starts to investigate the cause of the web server down <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						>>>
+						### Result of investigation
+						- - -
+
+						Bob noticed there was a pingflood attack on the web server. <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						→Firewall is installed in the web server. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						>>>
+						### Firewall is installed in the web server
+						- - -
+						<img src="./img/ns-fw.png" width=340></img>
+
+						This firewall is for connection rate limit.
+
+						>>>
+						## Is all the problem solved?
+
+						>>>
+
+						No, there is backdoor.  
+						But, Amazan haven't know this yet.
+
+						---
+						## Chapter 6.
 						### 
 
+						>>>
+						<img src="./img/ns-fw1.png" width=400></img>
+
+						### Program for a new web service?
+
+						>>>
+
+						![user](./img/document.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						![user](./img/person.png)
+						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+						![user](./img/person.png)
+
+						>>>
+						#### Meeting about the program Rechard stole from Amazan
+						- - -
+						<img src="./img/conference.png" style="width: 450px;"></img>
+
+						### Rakutan decides using this program. <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						>>>
+						## After 1 week.
+
+						>>>
+						<!--.slide: data-background-image="./img/newspaper.jpg"-->
+						## NEWS <!--.element: style="background-color: rgba(255, 255, 255, 0.7);" -->
+
+						### Rakutan company announced </br> a new web service!! <!--.element: style="background-color: rgba(255, 255, 255, 0.7);" -->
+
+						>>>
+						### Amazan suspects leak of information
+						- - -
+						Bob investigated web server again. <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						![user](./img/person.png)
+						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
+						![user](./img/server.png)
+
+						### THE BACKDOOR IS FOUND! <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						>>>
+						Bob deleted the backdoor.
+
+						Since then, information have never leaked.
+
 
 						---
-						## The END
+						## The END <!-- .element: style="margin-top: 200px;" -->
 
 						### Thank you for listening.
+
+						![user](./img/end_of_amazan.png) <!-- .element: style="margin-top: 100px;" class="fragment" data-fragment-index="1" -->
 
 					</script>
 				</section>
