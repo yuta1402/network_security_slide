@@ -102,26 +102,26 @@
 						>>>
 						### Result of the meeting
 						- - -
-						<img src="./img/person.png" style="padding: 10px;"></img>
+						<img src="./img/sherry.png" style="padding: 10px;"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 
-						The Sherry is appointed as the person responsible for stealing the confidential information of Amazan company.
+						The Sherry is appointed as the person responsible for stealing the confidential information of Amazan company. <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						>>>
-						<img src="./img/person.png"></img>
+						<img src="./img/sherry.png"></img>
 						<img src="./img/right-arrow-fat.png"></img>
-						<img src="./img/person.png"></img>
+						<img src="./img/richard.png"></img>
 
 						Sherry asked an employee Richard to do it.
 
 						>>>
 						# ATTACKER
 						- - -
-						<img src="./img/person.png"></img>
+						<img src="./img/richard.png"></img>
 
 						### Richard
 
 						>>>
-						<img src="./img/person.png"></img>
+						<img src="./img/richard.png"></img>
 						<img src="./img/right-arrow-fat.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 						<img src="./img/firewall.png"></img> <!-- .element: class="fragment" data-fragment-index="1" -->
 						<img src="./img/server.png"></img>
@@ -152,9 +152,9 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						>>>
 						### At Alice's house
 						- - -
-						<img src="./img/person.png"></img>
+						<img src="./img/richard.png"></img>
 						<img src="./img/document.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
-						<img src="./img/person.png"></img>
+						<img src="./img/alice.png"></img>
 						<img src="./img/right-arrow-fat.png"></img>
 						<img src="./img/tds.png"></img>
 
@@ -167,7 +167,7 @@ The session file ./hydra.restore was written. Type "hydra -R" to resume session.
 						- - -
 						## LOGIN SUCCESS <!-- .element: class="fragment" data-fragment-index="1" -->
 
-						<img src="./img/person.png"></img>
+						<img src="./img/richard.png"></img>
 						<img src="./img/right-arrow-fat.png"></img> <!-- .element: class="fragment" data-fragment-index="0" -->
 						<img src="./img/tds.png"></img>
 						<img src="./img/document.png"></img> <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -324,7 +324,7 @@ Next\n
 						Users call the Amazan because of the web server down. <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						>>>
-						![user](./img/person.png)
+						![user](./img/bob.png)
 						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
 						![user](./img/server-trouble.png)
 
@@ -344,6 +344,40 @@ Next\n
 						<img src="./img/ns-fw.png" width=340></img>
 
 						This firewall is for connection rate limit.
+
+						>>>
+						### Install firewall log 1.
+						- - -
+						```
+# iptables -A FLOOD -m hashlimit --hashlimit-name hashcheck_t 
+	--hashlimit 1/m --hashlimit-burst 30 --hashlimit-mode srcip
+	--hashlimit-htable-expire 120000 -j ACCEPT
+# iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+# iptables -A FORWARD -j ACCEPT
+# iptables -A FORWARD -j LOG --log-level INFO
+						```
+
+						>>>
+						### Install firewall log 2.
+						- - -
+						```
+Chain INPUT (policy DROP)
+target     prot opt source               destination
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination
+ACCEPT     0    --  anywhere             anywhere            
+	state RELATED,ESTABLISHED
+FLOOD      0    --  anywhere             anywhere
+
+Chain OUTPUT (policy DROP)
+target     prot opt source               destination
+
+Chain FLOOD (1 references)
+target     prot opt source               destination
+ACCEPT     0    --  anywhere             anywhere            
+	limit: avg 1/min burst 30 mode srcip htable-expire 120000
+						```
 
 						>>>
 						## Is all the problem solved?
@@ -366,9 +400,9 @@ Next\n
 
 						![user](./img/document.png) <!-- .element: class="fragment" data-fragment-index="0" -->
 
-						![user](./img/person.png)
+						![user](./img/richard.png)
 						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
-						![user](./img/person.png)
+						![user](./img/sherry.png)
 
 						>>>
 						#### Meeting about the program Rechard stole from Amazan
@@ -391,7 +425,7 @@ Next\n
 						- - -
 						Bob investigated web server again. <!-- .element: class="fragment" data-fragment-index="0" -->
 
-						![user](./img/person.png)
+						![user](./img/bob.png)
 						![user](./img/right-arrow-fat.png) <!-- .element: class="fragment" data-fragment-index="0" -->
 						![user](./img/server.png)
 
