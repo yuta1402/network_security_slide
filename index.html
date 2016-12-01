@@ -281,6 +281,7 @@ conf.linuxconf      hosts                 logrotate.d     profile.d     shadow.o
 
 						>>>
 						### Install a backdoor log 2.
+						- - -
 						```
 service backdoor
 {
@@ -399,11 +400,12 @@ Icmp:
 						### Install firewall log 1.
 						- - -
 						```
+# iptables -N FLOOD
 # iptables -A FLOOD -m hashlimit --hashlimit-name hashcheck_t 
 	--hashlimit 1/m --hashlimit-burst 30 --hashlimit-mode srcip
 	--hashlimit-htable-expire 120000 -j ACCEPT
 # iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
-# iptables -A FORWARD -j ACCEPT
+# iptables -A FORWARD -j FLOOD
 # iptables -A FORWARD -j LOG --log-level INFO
 						```
 
