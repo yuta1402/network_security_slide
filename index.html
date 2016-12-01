@@ -326,12 +326,14 @@ chargen-udp  echo         imaps     linuxconf-web  telnet  wu-ftpd
 						### Pingflood attack log
 						- - -
 						```
-# /bin/bash ./synflood 192.168.0.1 23
-attack to 192.168.0.1 port 23\n
-Next\n
-Next\n
-Next\n
-Next\n
+# ping -i 0 192.168.0.1
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.627 ms
+64 bytes from 192.168.0.1: icmp_seq=2 ttl=64 time=0.627 ms
+64 bytes from 192.168.0.1: icmp_seq=3 ttl=64 time=0.626 ms
+64 bytes from 192.168.0.1: icmp_seq=4 ttl=64 time=0.625 ms
+64 bytes from 192.168.0.1: icmp_seq=5 ttl=64 time=0.639 ms
+64 bytes from 192.168.0.1: icmp_seq=6 ttl=64 time=0.626 ms
+64 bytes from 192.168.0.1: icmp_seq=7 ttl=64 time=11.6 ms
 						```
 
 						---
@@ -363,6 +365,28 @@ Next\n
 						Bob noticed there was a pingflood attack on the web server. <!-- .element: class="fragment" data-fragment-index="0" -->
 
 						→Firewall is installed in the web server. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+						>>>
+						### Investigation log
+						- - -
+
+						```
+bash-2.05# netstat -s
+...
+Icmp:
+    338546 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 250
+        timeout in transit: 16
+        echo requests: 338280
+    338595 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        destination unreachable: 250
+        time exceeded: 65
+        echo replies: 338280
+						```
 
 						>>>
 						### Firewall is installed in the web server
