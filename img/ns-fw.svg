@@ -30,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="95.017637"
+     inkscape:cx="266.44621"
      inkscape:cy="607.46294"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -138,16 +138,6 @@
        width="125"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <image
-       y="24.719341"
-       x="258.07144"
-       id="image4932"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAGFBMVEUHPm4HPm4HPm4HPm4HPm4H Pm4HPm4HPm4idlzTAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCa nBgAAAAHdElNRQfgCxwLOS3wgVY6AAAAeElEQVRYw+3WsQrAIBADUCmU+4T+Zrb8vlvBqZcTpWCy PzBmudacHyeYCAbCVExG8j2DiYmJiYmJiYlCDj6uHp0Ujt6zb/7I7QJ5yWEYnUSWYAuhXGWK5N/1 lllLKFeZILdCIFepEMpVyuTSCOQqFcItBMVPdlanAxtJedgPTj2AAAAAAElFTkSuQmCC "
-       preserveAspectRatio="none"
-       height="125"
-       width="125"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -161,7 +151,7 @@
          id="tspan4946"
          x="389.33646"
          y="94.20919"
-         style="font-size:30px">Richard's Computer</tspan></text>
+         style="font-size:30px">Internet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -266,17 +256,7 @@
        y="506.00507"
        x="128.5"
        id="image8516"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAJ1BMVEUHPm4HPm4HPm4HPm4HPm4H
-Pm4HPm4HPm4HPm4HPm4HPm4HPm4HPm4yZFj5AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJ
-cEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfgCxwJHjU6rKhnAAABdklEQVRYw+3YUU7DMAwGYEts
-iAcfhgPsgSNwgB2GA3AoS4i3/1CQ0q1N4iT+p04DsbysVfMt6WK7zUR+b1PMzZbDvNm6T2pgyGT0
-6gR3cic3JCY7kqyDPEiEJlnCxkjqz5HvQQ5t0q47bKkCTR55oj2iXoDIz4160dMiyhK5hIAkJg8c
-WULYzx+HCE1sieBPd2Y1Edmfe6bYHJO0iia9YjAiEiDp/EzgLUFJpu81RWeYkkynts7n3ZggI+au
-m9ZRn2d6n8xneQXUAUFB6mFy0lgH9aM2u2pOVjsx2EuQYqJV9fKKR+TVrMogktigqrLDAOwwjacr
-PngCel69mW1JQN8K8MwT244cQd8M/gl5iZL30a+8XNf8M0BOh29CEJ0z6xAkJqd3mHKn1yVl2Mk1
-iWxPtCZPPNFgVhLEmbiOal9NhuWynsa4jpc9NEwQnlcVH0fqMRYJsE7BtOEehHsitzYNrAltj0jh
-vEuR5oJ/mbgNH17lb7UvD6eh+sS8j4sAAAAASUVORK5CYII=
-"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAJ1BMVEUHPm4HPm4HPm4HPm4HPm4H Pm4HPm4HPm4HPm4HPm4HPm4HPm4HPm4yZFj5AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJ cEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfgCxwJHjU6rKhnAAABdklEQVRYw+3YUU7DMAwGYEts iAcfhgPsgSNwgB2GA3AoS4i3/1CQ0q1N4iT+p04DsbysVfMt6WK7zUR+b1PMzZbDvNm6T2pgyGT0 6gR3cic3JCY7kqyDPEiEJlnCxkjqz5HvQQ5t0q47bKkCTR55oj2iXoDIz4160dMiyhK5hIAkJg8c WULYzx+HCE1sieBPd2Y1Edmfe6bYHJO0iia9YjAiEiDp/EzgLUFJpu81RWeYkkynts7n3ZggI+au m9ZRn2d6n8xneQXUAUFB6mFy0lgH9aM2u2pOVjsx2EuQYqJV9fKKR+TVrMogktigqrLDAOwwjacr PngCel69mW1JQN8K8MwT244cQd8M/gl5iZL30a+8XNf8M0BOh29CEJ0z6xAkJqd3mHKn1yVl2Mk1 iWxPtCZPPNFgVhLEmbiOal9NhuWynsa4jpc9NEwQnlcVH0fqMRYJsE7BtOEehHsitzYNrAltj0jh vEuR5oJ/mbgNH17lb7UvD6eh+sS8j4sAAAAASUVORK5CYII= "
        preserveAspectRatio="none"
        height="125"
        width="125"
@@ -296,5 +276,28 @@ vEuR5oJ/mbgNH17lb7UvD6eh+sS8j4sAAAAASUVORK5CYII=
          x="262.14285"
          y="587.36218"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '">Firewall</tspan></text>
+    <image
+       y="11.290763"
+       x="256.07144"
+       id="image4302"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAMFBMVEUHPm4HPm4HPm4HPm4HPm4H
+Pm4HPm4HPm4HPm4HPm4HPm4HPm4HPm4HPm4HPm4HPm51Fqu6AAAAAXRSTlMAQObYZgAAAAFiS0dE
+AIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfgCx4JDzpTw15tAAACcUlEQVRYw9WY
+320CMQzGw0MlhJDMBqzQDVjhNugq3YAV2IAVukFHqRFCqlDV9I7LH8exfYn6xD3BXX75vvgSxznn
+nu06Xoee5j5d3cB4YQMABXHpJiZjcOsidg+fl0YCxz8YRvbbSDi3SbHAFlfsFi5HNzRZL7wgOGW4
+6uS7dRpA3ztVRteDSDKfUpeGTD1RqgdoTd+yR0WGicQesWDQRNLd4qmFYLaE5LE9epiWf24IgjMu
+wl1CLWMhmSG2mLPK6EdgsrM3dFtDZLxOwQhxxWYGj/ncliAr1qoWmRuvsjOYk4PhK+anhHyVzSRf
+43UNI0gBJu1kkdkURZAmE68yMOTJkhui7CsMBx2dC2nuHb0uQ6dk7Pyq+iJMOQTDl/csvwW5wUSw
+QDBG2/tFmfxvHPd9AfHFgqxmjmoN6NxyrgvxYkazERTzk4lcWmQklQWZfyOuBXESsraIk+tV4UFt
+QJRtCkxiIyEHy9a6jFiQfdGIqVxgQV5ylpIfKwdAnTIxr3JkzlZq5quQ2+OPLIN07ywrPUUGSY6s
+EYm5l9tlhXix2lh5C6lkinTHXv+ZxpPuLM7LSHqQtp9qwKghD2vBdRkirKqnqpACFtSdjnil9Ah3
+9hKCcrHCl6FYSoK0J4GlAvLW144ks3spyGKdWtV8sYFaD9YxmX78WBX0q127o8BYwJmagOXTBdCF
+6PJS8fJ5duP58iGDFTqW09F7cMp9WZUY0mKeyVjFW6yrmIy+taphMnZj7VQ5NJRiTAaL89gyMtZJ
+Vs2jHHjtSlSZidBjy9zA0HUj7Z9H2o7Hh25CsNZyai+Jts9E2/4PAzG1PduXsz9x2FzQIwH3XQAA
+AABJRU5ErkJggg==
+"
+       preserveAspectRatio="none"
+       height="125"
+       width="125" />
   </g>
 </svg>
